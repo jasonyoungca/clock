@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    height: 100%;
+
+}
+.clock{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: aliceblue;
+    border-radius: 100%;
+    border: 6px solid blue;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.clock .center{
+    height: 6px;
+    width: 6px;
+    background-color: blue;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.clock .hour{
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 60s infinite linear;
+}
+.clock .hour:before{
+    content: "";
+    height: 60px;
+    width: 3px;
+    background-color: blue;
+    position: absolute;
+    top: 30px;   
+}
+.clock .minute{
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 30s infinite linear;
+}
+.clock .minute:before{
+    position: absolute;
+    content: "";
+    background-color: blue;
+    height: 40px;
+    width: 1px;
+    top: 50px;
+}
+.clock .second{
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: time 15s infinite linear;
+}
+.clock .second:before{
+    position: absolute;
+    content: "";
+    background-color: blue;
+    height: 45px;
+    width: 2px;
+    top: 45px;
+
+}
+@keyframes time {
+to {transform: rotate(360deg);}
+}
